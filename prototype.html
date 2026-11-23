@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge - Application Prototype</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+<div class="site-title">SkillBridge</div>
+<p>Employee Knowledge and Cross-Training</p>
+</header>
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="prototype.html" aria-current="page">Application Prototype</a>
+<a href="marketing.html">Marketing</a>
+<a href="guide.html">User Guide</a>
+</nav>
+<main>
+<h1>SkillBridge Application Prototype</h1>
+<p>This demonstration calculates how many qualified employees are available for each responsibility. Select an employee as unavailable to see how their absence affects the team.</p>
+<p class="notice">Use fictional information only. This is a classroom prototype, not an official readiness or personnel management system.</p>
+<h2>1. Employees</h2>
+<form id="employeeForm">
+<label for="employeeName">Employee name:</label>
+<input id="employeeName" maxlength="60" required>
+<button type="submit">Add Employee</button>
+</form>
+<p>Check the box next to an employee to simulate an absence.</p>
+<div id="employees"></div>
+<p><button id="reset" type="button">Reset Absences</button></p>
+<h2>2. Responsibilities</h2>
+<form id="taskForm">
+<label for="taskName">Responsibility name:</label>
+<input id="taskName" maxlength="80" required>
+<button type="submit">Add Responsibility</button>
+</form>
+<p>Select the employees qualified to perform each task.</p>
+<div id="tasks"></div>
+<h2>3. Coverage Results</h2>
+<p id="summary" aria-live="polite"></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Responsibility</th><th scope="col">Qualified</th><th scope="col">Available</th><th scope="col">Status</th></tr></thead>
+<tbody id="results"></tbody>
+</table>
+</div>
+<h2>4. Cross-Training Recommendations</h2>
+<ul id="recommendations"></ul>
+<p><button id="restore" type="button">Restore Sample Data</button></p>
+<p id="message" role="status"></p>
+<noscript><p>Enable JavaScript to use the prototype.</p></noscript>
+</main>
+<footer><p>SkillBridge | William Nelson | Computer Technology Capstone | 2026</p></footer>
+</body>
+</html>
